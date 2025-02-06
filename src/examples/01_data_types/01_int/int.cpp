@@ -24,3 +24,8 @@ void reassign_int_data_type()
     num = 15.5;
     cout<<num<<"\n";//truncates numbers to the right of the decimal
 }
+
+int echo_variable(int num)
+{
+    return num;
+}
