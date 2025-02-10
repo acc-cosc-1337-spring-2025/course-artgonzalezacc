@@ -17,3 +17,8 @@ int integer_double_truncate(double num)
 {
     return num;
 }
+
+double multiply_int_double(int num1, double num2)
+{
+    return num1 * num2;
+}

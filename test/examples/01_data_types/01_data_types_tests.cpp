@@ -34,6 +34,11 @@ TEST_CASE("Double to int truncates decimal portion")
 	REQUIRE(integer_double_truncate(10.99) == 10);
 }
 
+TEST_CASE("Multiply int and double should return ... data type")
+{
+	REQUIRE(multiply_int_double(10, .55) == 5.5);
+}
+
 /*test case add_to_double_1 with 1 as parameter*/
 
 /*test case add_to_double_2 with 0 as parameter*/
