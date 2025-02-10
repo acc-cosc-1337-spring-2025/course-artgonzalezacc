@@ -12,3 +12,8 @@ double add_to_double_1(double num)
 /*
 Write code for function named add_to_double_1 to add .3 5 times to incoming double parameter
 */
+
+int integer_double_truncate(double num)
+{
+    return num;
+}
