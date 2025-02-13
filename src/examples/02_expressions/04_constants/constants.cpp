@@ -1,3 +1,12 @@
+#include "constants.h"
+
+
+double calculat_interest(int amount)
+{
+    return amount * RATE;
+}
+
+
 /*
 Function get_area_of_circle given the radius returns the area of a circle.
 Create const double PI with 3.14159
