@@ -20,3 +20,9 @@ TEST_CASE("Test OR truth table")
 	REQUIRE((true or false) == true);
 	REQUIRE((false or false) == false);
 }
+
+TEST_CASE("Test NOT truth table")
+{
+	REQUIRE((not true) == false);
+	REQUIRE((not false) == true);
+}
