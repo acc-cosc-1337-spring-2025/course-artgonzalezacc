@@ -34,3 +34,15 @@ TEST_CASE("Test is number in range")
 	REQUIRE(is_number_in_range(1, 10, 5) == true);
 	REQUIRE(is_number_in_range(1, 10, 11) == false);
 }
+
+TEST_CASE("Test is vowel")
+{
+	REQUIRE(is_vowel('a') == true);
+	REQUIRE(is_vowel('e') == true);
+	REQUIRE(is_vowel('i') == true);
+	REQUIRE(is_vowel('o') == true);
+	REQUIRE(is_vowel('u') == true);
+
+	REQUIRE(is_vowel('b') == false);
+	REQUIRE(is_vowel('m') == false);
+}

@@ -16,3 +16,8 @@ bool is_number_in_range(int min_range, int max_range, int num)
 
     return in_range;
 }
+
+bool is_vowel(char letter)
+{
+    return letter == 'a' or letter == 'e' || letter == 'i' or letter == 'o' || letter == 'u';
+}
