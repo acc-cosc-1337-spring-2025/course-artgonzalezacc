@@ -6,20 +6,14 @@ using std::cin;
 
 int main() 
 {
-	int min, max, num;
+	char letter = 'a';
 
-	cout<<"Enter min number: ";
-	cin>>min;
+	cout<<is_vowel(letter)<<"\n";
+	cout<<is_consonant(letter)<<"\n";
 
-	cout<<"Enter max number: ";
-	cin>>max;
+	int num = 100;
 
-	cout<<"Enter number: ";
-	cin>>num;
-
-	auto in_range = is_number_in_range(min, max, num);
-
-	cout<<in_range<<"\n";
+	cout<<is_number_even(num)<<"\n";
 
 	return 0;
 }

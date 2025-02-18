@@ -6,3 +6,5 @@ bool is_number_in_range(int min_range, int max_range, int num);
 bool is_vowel(char letter);
 
 bool is_consonant(char letter);
+
+bool is_number_even(int num);

@@ -26,3 +26,8 @@ bool is_consonant(char letter)
 {
     return not is_vowel(letter);
 }
+
+bool is_number_even(int num)
+{
+    return num % 2 == 0;
+}

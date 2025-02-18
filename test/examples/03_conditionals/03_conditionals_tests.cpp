@@ -58,3 +58,9 @@ TEST_CASE("Test is consonant")
 	REQUIRE(is_consonant('a') == false);
 	REQUIRE(is_consonant('e') == false);
 }
+
+TEST_CASE("Test is number even")
+{
+	REQUIRE(is_number_even(3) == false);
+	REQUIRE(is_number_even(4) == true);
+}
