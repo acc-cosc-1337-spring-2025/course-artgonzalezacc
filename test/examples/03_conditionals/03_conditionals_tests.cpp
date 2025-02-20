@@ -3,6 +3,7 @@
 #include "if.h"
 #include "if_else.h"
 #include "if_else_if.h"
+#include "switch.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -83,4 +84,15 @@ TEST_CASE("Test get generation if else if")
 	REQUIRE(get_generation(1930) == "Silent Generation");
 	REQUIRE(get_generation(1920) == "Greatest Generation");
 	REQUIRE(get_generation(1800) == "Invalid Year");
+}
+
+TEST_CASE("Test menu option switch statement")
+{
+	REQUIRE(menu_option(0) == "Invalid Option");
+	REQUIRE(menu_option(1) == "Option 1");
+	REQUIRE(menu_option(2) == "Option 2");
+	REQUIRE(menu_option(3) == "Option 3");
+	REQUIRE(menu_option(4) == "Option 4");
+	REQUIRE(menu_option(5) == "Invalid Option");
+
 }
