@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "if.h"
 #include "if_else.h"
+#include "if_else_if.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -70,4 +71,16 @@ TEST_CASE("Test is number odd")
 {
 	REQUIRE(is_number_odd(2) == false);
 	REQUIRE(is_number_odd(3) == true);
+}
+
+TEST_CASE("Test get generation if else if")
+{
+	REQUIRE(get_generation(2030) == "Invalid Year");
+	REQUIRE(get_generation(1997) == "Centenial");
+	REQUIRE(get_generation(1995) == "Millenial");
+	REQUIRE(get_generation(1970) == "Generation X");
+	REQUIRE(get_generation(1950) == "Baby Boomer");
+	REQUIRE(get_generation(1930) == "Silent Generation");
+	REQUIRE(get_generation(1920) == "Greatest Generation");
+	REQUIRE(get_generation(1800) == "Invalid Year");
 }
