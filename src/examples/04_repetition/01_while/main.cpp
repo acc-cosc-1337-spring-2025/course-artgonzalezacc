@@ -1,8 +1,16 @@
 #include "while.h"
 
+using std::cin; using std::cout;
+
 int main() 
 {
-	use_while_loop(3);
+	auto num = 0;
+
+	cout<<"Enter a number: ";
+	cin>>num;
+
+	auto result = get_sum_of_squares(num);
+	cout<<"Sum of squares: "<<result<<"\n";
 
 	return 0;
 }
