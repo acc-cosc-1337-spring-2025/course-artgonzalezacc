@@ -43,4 +43,51 @@ void prompt_user()
     
 }
 
+void display_menu()
+{
+    cout<<"1-Option 1\n";
+    cout<<"2-Option 2\n";
+    cout<<"3-Option 3\n";
+    cout<<"4-Exit\n";
+}
 
+void run_menu()
+{
+    auto choice = 0;
+
+    do
+    {
+        display_menu();
+
+        cout<<"Enter menu option ";
+        cin>>choice;
+
+        handle_menu_option(choice);
+
+    } while (choice != 4);
+    
+}
+
+void handle_menu_option(int choice)
+{
+    switch (choice)
+    {
+    case 1:
+        cout<<"\nYou selected choice 1\n";
+        break;
+    case 2:
+        cout<<"\nYou selected choice 2\n";
+        break;
+    case 3:
+        cout<<"\nYou selected choice 3\n";
+        break;
+    case 4:
+        cout<<"\nExiting...\n";
+        break;
+    
+    default:
+        cout<<"\nInvalid menu option\n";
+        break;
+    }
+
+}
