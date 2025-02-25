@@ -7,7 +7,7 @@ int get_sum_of_squares_do(int num);
 
 
 //Write void function protype named prompt_user with no parameters
-
+void prompt_user();
 
 
 
