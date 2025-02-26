@@ -2,7 +2,7 @@
 
 int main() 
 {
-	nested_while_loop(2);
+	multiplication_table_while(10, 10);
 
 	return 0;
 }

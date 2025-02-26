@@ -1,6 +1,6 @@
 #include "while.h"
 
-using std::cout;
+using std::cout; using std::setw;
 
 void use_while_loop(int num)
 {
@@ -51,6 +51,26 @@ void nested_while_loop(int num)
         }
 
         i++;
+    }
+}
+
+void multiplication_table_while(const int rows, const int cols)
+{
+    auto r = 0;
+
+    while(r < rows)
+    {
+        auto c = 0;
+
+        while(c < cols)
+        {
+            auto product = (r + 1) * (c + 1);
+            cout<<setw(4)<<product;
+            c++;
+        }
+
+        r++;
+        cout<<"\n";
     }
 }
 
