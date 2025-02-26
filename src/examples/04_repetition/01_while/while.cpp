@@ -35,6 +35,25 @@ int get_sum_of_squares(int num)
 }
 
 
+void nested_while_loop(int num)
+{
+    auto i = 0;
+
+    while(i < num)
+    {
+        auto j = 0;
+        cout<<"Outer loop...\n";
+        
+        while(j < num)
+        {
+            cout<<"\tInner loop...\n";
+            j++;
+        }
+
+        i++;
+    }
+}
+
 //Using a while loop write code for display function that accepts a string and displays 
 //each character of the string in a line
 //Example: display("Hello")
