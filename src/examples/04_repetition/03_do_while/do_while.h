@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 
 void use_do_while(int num);
 
@@ -15,3 +16,4 @@ void display_menu();
 void run_menu();
 void handle_menu_option(int choice);
 
+void multiplication_table_do(const int rows, const int cols);

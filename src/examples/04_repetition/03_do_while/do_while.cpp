@@ -2,6 +2,7 @@
 
 using std::cin;
 using std::cout;
+using std::setw;
 
 void use_do_while(int num)
 {
@@ -90,4 +91,25 @@ void handle_menu_option(int choice)
         break;
     }
 
+}
+
+void multiplication_table_do(const int rows, const int cols)
+{
+    auto r = 0;
+
+    do
+    {
+        auto c = 0;
+
+        do
+        {
+            cout<<setw(4)<<(r + 1) * (c + 1);
+            c++;
+        } while (c < cols);
+        
+        cout<<"\n";
+        r++;
+
+    } while (r < rows);
+    
 }

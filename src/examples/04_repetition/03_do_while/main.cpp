@@ -2,7 +2,7 @@
 
 int main() 
 {	
-	run_menu();
+	multiplication_table_do(10, 10);
 
 	return 0;
 }
