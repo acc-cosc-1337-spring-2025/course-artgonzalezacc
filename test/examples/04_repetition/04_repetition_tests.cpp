@@ -28,3 +28,25 @@ TEST_CASE("Test get sum of squares do")
 	REQUIRE(get_sum_of_squares_do(4) == 30);
 	REQUIRE(get_sum_of_squares_do(5) == 55);
 }
+
+TEST_CASE("Test copy/value variables")
+{
+	auto num1 = 5, num2 = 10;
+	
+	REQUIRE(num1 < num2);
+	
+	num1 = num2;//The value of num2 is copied to num1
+
+	REQUIRE(num1 == num2);
+}
+
+TEST_CASE("Test reference variable")
+{
+	auto num1 = 5;
+	int &num2 = num1;
+
+	REQUIRE(num1 == num2);
+	num2 = 10; //num2 has the address of num1 thus we can modify num1 value w this statement
+
+	REQUIRE(num1 == 10);
+}
