@@ -1,7 +1,10 @@
 #include "void.h"
 
+using std::cout;
+
 int main()
 {
-    use_local_variable();
+    cout<<global<<"\n";
+    use_global_variable();
     return 0;
 }
