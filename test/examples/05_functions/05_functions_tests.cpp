@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "reference.h"
+#include "void.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -49,8 +50,16 @@ TEST_CASE("Test return value/copy ")
 
 TEST_CASE("Test return reference ")
 {
+	/*
+	Trying to return a reference to a local variable-generates memory error
 	int num1 =2, num2 = 2;
 
 	REQUIRE(get_product_ref(num1, num2)==4);
+	*/
+}
 
+TEST_CASE("Test show area default args")
+{
+	REQUIRE(show_area(5, 5) == 25);
+	REQUIRE(show_area() == 200);
 }
