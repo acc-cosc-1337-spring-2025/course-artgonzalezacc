@@ -1,0 +1,1 @@
+void use_local_variable();
