@@ -22,3 +22,24 @@ void string_ref_param(std::string &lang)
     }
 }
 
+void string_value_param_while(std::string lang)
+{
+    auto indx = 0;
+    while(indx < lang.length())
+    {
+        lang[indx] = '.';
+        indx++;
+    }
+
+}
+
+void string_ref_param_while(std::string &lang)
+{
+    auto indx = 0;
+    while(indx < lang.length())
+    {
+        lang[indx] = '.';
+        indx++;
+    }
+}
+

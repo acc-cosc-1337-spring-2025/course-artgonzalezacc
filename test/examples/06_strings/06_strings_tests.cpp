@@ -25,3 +25,23 @@ TEST_CASE("Test string ref param")
 
 	REQUIRE(lang == "...");
 }
+
+TEST_CASE("Test string ref param while")
+{
+	string lang = "C++";
+
+	string_ref_param_while(lang);
+
+	REQUIRE(lang == "...");
+}
+
+TEST_CASE("Test string value or copy param while")
+{
+	string lang = "C++";
+
+	string_value_param_while(lang);
+
+	REQUIRE(lang == "C++");
+}
+
+
