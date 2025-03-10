@@ -16,3 +16,12 @@ TEST_CASE("Test string value or copy param")
 
 	REQUIRE(lang == "C++");
 }
+
+TEST_CASE("Test string ref param")
+{
+	string lang = "C++";
+
+	string_ref_param(lang);
+
+	REQUIRE(lang == "...");
+}

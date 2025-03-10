@@ -14,3 +14,11 @@ void string_value_param(string lang)
 
 }
 
+void string_ref_param(std::string &lang)
+{
+    for(auto &ch: lang) //no & means working with a copy of each lang character
+    {
+        ch = '.';
+    }
+}
+
