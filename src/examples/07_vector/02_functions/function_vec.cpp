@@ -13,3 +13,13 @@ void loop_vector_w_while()
         index++;
     }
 }
+
+void loop_vector_w_for() 
+{
+    vector<char> chars{'b', 'z', 'm'};
+
+    for(auto i = 0; i < chars.size(); i++)
+    {
+        cout<<chars[i]<<"\n";
+    }
+}
