@@ -21,6 +21,12 @@ void loop_vector_w_for()
     for(auto i = 0; i < chars.size(); i++)
     {
         cout<<chars[i]<<"\n";
+        chars[i] = 'a';
+    }
+
+    for(auto i = 0; i < chars.size(); i++)
+    {
+        cout<<chars[i]<<"\n";
     }
 }
 
@@ -28,8 +34,15 @@ void loop_vector_w_for_range()
 {
     vector<int> nums{90, 789, 55};
 
+    for(auto &num: nums) //use memory operator to write each element in the nums vector/list
+    {
+        cout<<num<<"\n";
+        num = 0;
+    }
+
     for(auto num: nums)
     {
         cout<<num<<"\n";
     }
+
 }
