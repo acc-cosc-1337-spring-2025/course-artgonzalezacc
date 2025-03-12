@@ -23,3 +23,13 @@ void loop_vector_w_for()
         cout<<chars[i]<<"\n";
     }
 }
+
+void loop_vector_w_for_range()
+{
+    vector<int> nums{90, 789, 55};
+
+    for(auto num: nums)
+    {
+        cout<<num<<"\n";
+    }
+}
