@@ -7,6 +7,7 @@ public://outside code class/functions can use variables and functions that are p
     BankAccount(int b) : balance(b) {}//class constructor
     int get_balance(){return balance;}
     void deposit(int amount);
+    void withdraw(int amount);
 private://only this class can use variables/functions
     int balance {0};
 
