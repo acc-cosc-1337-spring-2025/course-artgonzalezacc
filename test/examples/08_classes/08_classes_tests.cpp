@@ -60,3 +60,21 @@ TEST_CASE("Test account withdraw with two account object(variable)")
 	account2.deposit(50);
 	REQUIRE(account2.get_balance() == 800);
 }
+
+TEST_CASE("Test account deposit with negative value")
+{
+	BankAccount account(500);
+	REQUIRE(account.get_balance() == 500);
+
+	account.deposit(-250);
+	REQUIRE(account.get_balance() == 500);
+}
+
+TEST_CASE("Test account withdraw with negative value")
+{
+	BankAccount account(500);
+	REQUIRE(account.get_balance() == 500);
+
+	account.withdraw(-250);
+	REQUIRE(account.get_balance() == 500);
+}
