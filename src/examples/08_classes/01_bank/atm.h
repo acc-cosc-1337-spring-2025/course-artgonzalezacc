@@ -18,3 +18,7 @@ private:
 };
 
 #endif
+
+//FREE FUNCTION - NOT PART OF THE BANKACCOUNT CLASS
+void display_balance(BankAccount account);
+

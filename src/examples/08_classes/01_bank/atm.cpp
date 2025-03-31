@@ -24,3 +24,9 @@ void ATM::make_withdraw()
     cin>>amount;
     account.withdraw(amount);
 }
+
+//FREE FUNCTION - NOT PART OF THE BANKACCOUNT CLASS
+void display_balance(BankAccount account)
+{
+    cout<<"Free function display_balance "<<account.get_balance()<<"\n";
+}
