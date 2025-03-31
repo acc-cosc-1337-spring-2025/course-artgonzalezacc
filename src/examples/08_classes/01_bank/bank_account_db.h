@@ -1,5 +1,9 @@
 #include<cstdlib>
 
+//header guards
+#ifndef BANK_ACCOUNT_DB
+#define  BANK_ACCOUNT_DB
+
 class BankAccountDB
 {
 public:
@@ -9,3 +13,4 @@ private:
     int balance;
     void get_balance_from_db();
 };
+#endif

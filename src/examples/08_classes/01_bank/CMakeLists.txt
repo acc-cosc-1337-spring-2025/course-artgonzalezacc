@@ -7,4 +7,5 @@ add_library(ex_08_01_library "bank_account.cpp" "bank_account.h"
 								"bank_account_db.cpp" "bank_account_db.h")
 add_executable(ex_08_01_exe "main.cpp" "bank_account.cpp" "atm.cpp"
                                "customer.cpp" "transaction.cpp" "savings_account.cpp"
+							   "bank_account_db.cpp"
 							   "checking_account.cpp")
