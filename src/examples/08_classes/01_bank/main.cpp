@@ -22,7 +22,9 @@ int main()
 	atm.make_withdraw();
 	atm.display_balance();
 	
-	display_balance(account);
+	
+	BankAccount account1 = get_account();
+	display_balance(account1);
 
 	return 0;
 }

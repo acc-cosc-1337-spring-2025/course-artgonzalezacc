@@ -21,4 +21,4 @@ private:
 
 //FREE FUNCTION - NOT PART OF THE BANKACCOUNT CLASS
 void display_balance(BankAccount account);
-
+BankAccount get_account();

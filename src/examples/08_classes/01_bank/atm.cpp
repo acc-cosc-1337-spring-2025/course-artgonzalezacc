@@ -30,3 +30,9 @@ void display_balance(BankAccount account)
 {
     cout<<"Free function display_balance "<<account.get_balance()<<"\n";
 }
+
+BankAccount get_account()
+{
+    BankAccount account(500);
+    return account;
+}
