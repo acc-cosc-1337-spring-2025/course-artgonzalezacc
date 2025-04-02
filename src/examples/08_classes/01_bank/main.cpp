@@ -12,12 +12,8 @@ int main()
 {
 	srand(time(NULL));
 	BankAccountDB db;
-
-	CheckingAccount account(db.get_balance());
-	cout<<"Checking balance: "<<account.get_balance()<<"\n";
-
-	SavingsAccount savings(159);
-	cout<<"Savings balance: "<<savings.get_balance()<<"\n";
+	BankAccount bad_account = get_reference_account();
+	cout<<bad_account.get_balance();
 
 	/*
 	BankAccountDB db;

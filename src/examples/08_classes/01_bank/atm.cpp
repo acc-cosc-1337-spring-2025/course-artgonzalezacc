@@ -36,3 +36,9 @@ BankAccount get_account()
     BankAccount account(500);
     return account;
 }
+
+BankAccount& get_reference_account()
+{
+    BankAccount account(500);
+    return account;
+}
