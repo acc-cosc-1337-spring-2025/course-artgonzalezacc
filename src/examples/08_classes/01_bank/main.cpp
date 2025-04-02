@@ -1,4 +1,5 @@
 #include "atm.h"
+#include "checking_account.h"
 #include "bank_account_db.h"
 #include <iostream>
 #include <time.h>
@@ -9,6 +10,12 @@ using std::cin;
 int main()
 {
 	srand(time(NULL));
+	BankAccountDB db;
+
+	CheckingAccount account(db.get_balance());
+	cout<<"Checking balance: "<<account.get_balance()<<"\n";
+
+	/*
 	BankAccountDB db;
 
 	//variable of a class is equal to  an object in memory
@@ -24,7 +31,7 @@ int main()
 	
 	
 	BankAccount account1 = get_account();
-	display_balance(account1);
+	display_balance(account1);*/
 
 	return 0;
 }
