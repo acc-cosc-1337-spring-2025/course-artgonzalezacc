@@ -1,16 +1,14 @@
 #include<iostream>
-#include "dynamic_memory.h"
+#include<memory>
 
-using std::cout;
+using std::cout; using std::unique_ptr; using std::make_unique;
 
 int main() 
 {
-
-	int* num = get_dynamic_memory_bank_account();
+	unique_ptr<int> num = make_unique<int>(150);
 	cout<<*num<<"\n";
 
-	delete num;
-	num = nullptr;
+	//deleting the dynamic memory is handle by the unique ptr
 
 
 	return 0;
