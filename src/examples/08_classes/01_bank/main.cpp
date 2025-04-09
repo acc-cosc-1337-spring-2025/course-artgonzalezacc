@@ -3,23 +3,17 @@
 #include "bank_account_db.h"
 #include "savings_account.h"
 #include <iostream>
-#include <time.h>
+#include<memory>
 
-using std::cout;
+using std::cout; using std::unique_ptr; using std::make_unique;
 using std::cin;
 
 int main()
 {
-	CheckingAccount checking(500);
-	BankAccount* account = &checking;
-	
-	cout<<account->get_balance()<<"\n";//be a checking account 
+	unique_ptr<BankAccount> account = make_unique<SavingsAccount>(500);
 
-	SavingsAccount savings(750);
-	account = &savings;
+	cout<<"Balance: "<<account->get_balance()<<"\n";
 
-	cout<<account->get_balance()<<"\n";//be a savings account 
-	cout<<savings.get_balance()<<"\n";
 
 	return 0;
 }
