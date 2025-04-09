@@ -1,14 +1,20 @@
 #include<iostream>
 #include<memory>
 
-using std::cout; using std::unique_ptr; using std::make_unique;
+using std::cout; using std::shared_ptr; using std::make_shared;
 
 int main() 
 {
-	unique_ptr<int> num = make_unique<int>(150);
-	cout<<*num<<"\n";
+	shared_ptr<int> num_sp1 = make_shared<int>(10);
+	cout<<*num_sp1<<"\n";
+	cout<<"Count: "<<num_sp1.use_count()<<"\n";
 
-	//deleting the dynamic memory is handle by the unique ptr
+	shared_ptr<int> num_sp2 = num_sp1;
+	cout<<*num_sp2<<"\n";
+	cout<<"Count: "<<num_sp2.use_count()<<"\n";
+	
+
+
 
 
 	return 0;
