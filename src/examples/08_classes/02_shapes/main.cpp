@@ -11,15 +11,23 @@ Create vector of Shape pointers
 iterate with auto
 */
 
+using std::vector;
+
 int main() 
 {
-	Shape* shape = new Line();//legacy pointer use new to create memory on the heap
-	shape->draw();
-	delete shape;
+	vector<Shape*> shapes;
+	shapes.push_back(new Line());
+	shapes.push_back(new Circle());
 
-	shape = new Circle();
-	shape->draw();
-	delete shape;
+	for(auto shape: shapes)
+	{
+		shape->draw();
+	}
+
+	for(auto shape: shapes)
+	{
+		delete shape;
+	}
 	
 	return 0;
 }
