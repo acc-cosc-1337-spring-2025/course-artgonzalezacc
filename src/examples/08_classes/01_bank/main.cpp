@@ -18,8 +18,9 @@ int main()
 
 	accounts.push_back(std::move(checking));
 	
-	cout<<"checking get balance "<<checking->get_balance()<<"\n";
+	//cout<<"checking get balance "<<checking->get_balance()<<"\n"; ERRORS OUR//CHECKING POINTS TO INVALID MEMORY
 
+	cout<<accounts[0]->get_balance()<<"\n";
 
 	return 0;
 }
