@@ -13,11 +13,13 @@ iterate with auto
 
 int main() 
 {
-	Line line;
-	line.draw();
+	Shape* shape = new Line();//legacy pointer use new to create memory on the heap
+	shape->draw();
+	delete shape;
 
-	Circle circle;
-	circle.draw();
+	shape = new Circle();
+	shape->draw();
+	delete shape;
 	
 	return 0;
 }
