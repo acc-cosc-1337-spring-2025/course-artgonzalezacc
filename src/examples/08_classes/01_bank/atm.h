@@ -1,6 +1,7 @@
 //atm.h
 #include "bank_account.h"
 #include "checking_account.h"
+#include "customer.h"
 #include "savings_account.h"
 #include <iostream>
 #include<vector>

@@ -47,10 +47,10 @@ void run_menu()
 {
     //list of unique ptr to accounts
     auto account_index = 0, bank_menu_choice=0;
-    
-    vector<unique_ptr<BankAccount>> accounts;
-    accounts.push_back(make_unique<CheckingAccount>(500));
-    accounts.push_back(make_unique<SavingsAccount>(750));
+    BankAccountDB db;
+    vector<Customer> customers;
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
 
     //loop prompt user for checking or savings
     do
@@ -58,7 +58,7 @@ void run_menu()
         cout<<"Enter 1 for checking 2 for savings";
         cin>>account_index;
 
-        auto* account = accounts[account_index-1].get();
+        auto* account = customers[0].get_account(account_index-1);
         ATM atm(account);
 
         //loop display menu handle user options
