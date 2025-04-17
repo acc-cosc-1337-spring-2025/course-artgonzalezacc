@@ -51,14 +51,21 @@ void run_menu()
     vector<Customer> customers;
     customers.push_back(Customer(db));
     customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    
 
+    auto customer_index = rand() % customers.size();
+    cout<<"index: "<<customer_index<<"\n";
     //loop prompt user for checking or savings
     do
     {
+
         cout<<"Enter 1 for checking 2 for savings";
         cin>>account_index;
 
-        auto* account = customers[0].get_account(account_index-1);
+        auto* account = customers[customer_index].get_account(account_index-1);
         ATM atm(account);
 
         //loop display menu handle user options

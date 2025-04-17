@@ -4,13 +4,13 @@
 #include "savings_account.h"
 #include <iostream>
 #include<memory>
+#include<time.h>
 #include<vector>
-
-using std::cout; using std::unique_ptr; using std::make_unique;
-using std::cin; using std::vector;
 
 int main()
 {
+	srand(time(NULL));
+
 	run_menu();
 
 	return 0;

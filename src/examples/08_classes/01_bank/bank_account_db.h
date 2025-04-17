@@ -1,4 +1,5 @@
 #include<cstdlib>
+#include<iostream>
 
 //header guards
 #ifndef BANK_ACCOUNT_DB
@@ -7,10 +8,7 @@
 class BankAccountDB
 {
 public:
-    BankAccountDB(){this->get_balance_from_db();}
-    int get_balance(){return balance;}
-private:
-    int balance;
-    void get_balance_from_db();
+    BankAccountDB(){}
+    int get_balance(){return rand() % 10000 + 1;}    
 };
 #endif
