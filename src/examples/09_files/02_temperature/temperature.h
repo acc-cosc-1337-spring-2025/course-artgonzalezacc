@@ -7,7 +7,7 @@ class Temperature
 public:
     Temperature(int h, double r) : hour(h), reading(r){/**empty code block */}
     int get_hour() const{return hour;}
-    double get_temperature() const {return reading;}
+    double get_reading() const {return reading;}
 private:
     int hour;
     double reading;
