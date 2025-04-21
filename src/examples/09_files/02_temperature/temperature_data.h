@@ -12,6 +12,7 @@ class TemperatureData
 {
 public:
     void save_temps(const std::vector<Temperature>& temps);
+    std::vector<Temperature> get_temps();
 private:
     std::string file_name{"temps.dat"};
 };

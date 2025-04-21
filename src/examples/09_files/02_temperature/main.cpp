@@ -1,6 +1,6 @@
 #include "temperature_data.h"
 
-using std::vector;
+using std::cout; using std::vector;
 
 int main()
 {
@@ -9,6 +9,15 @@ int main()
     TemperatureData data;
 
     data.save_temps(temps);
+
+	vector<Temperature> read_temps;
+
+	read_temps = data.get_temps();
+
+	for(auto temp: temps)
+	{
+		cout<<temp.get_hour()<<" "<<temp.get_reading()<<"\n";
+	}
 
     return 0;
 }
