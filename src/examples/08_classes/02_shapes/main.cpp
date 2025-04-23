@@ -11,11 +11,15 @@ iterate with auto
 
 int main() 
 {
-	Circle circles[3];
+	Circle circle1;
+	Line line;
+	Circle circle2;
 
-	circles[0].draw();
-	circles[1].draw();
-	circles[2].draw();
+	Shape* shapes[3]{&circle1, &line, &circle2};
+
+	shapes[0]->draw();
+	shapes[1]->draw();
+	shapes[2]->draw();
 
 	return 0;
 }
