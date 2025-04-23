@@ -12,3 +12,16 @@ void use_dynamic_memory_array(const int size)
 
     delete[] nums;
 }
+
+int* get_dynamic_memory(const int size)
+{
+    int* nums = new int[size];
+    cout<<"Created memory at: "<<nums<<"\n";
+    return nums;
+}
+
+void delete_dynamic_memory(int* nums)
+{
+    cout<<"Deleting memory at: "<<nums<<"\n";
+    delete[] nums;
+}
