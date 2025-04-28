@@ -9,6 +9,7 @@ class MyVector
 public:
     MyVector(int c);//constructor
     MyVector(const MyVector& v);//copy constructor
+    MyVector& operator=(const MyVector& v);//copy assignment
     int& operator[](int index){return elements[index];}
     int& operator[](int index)const{return elements[index];}    
     ~MyVector();//destructor

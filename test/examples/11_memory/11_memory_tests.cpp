@@ -18,12 +18,17 @@ TEST_CASE("Function value, reference, and pointer parameters")
 	REQUIRE(num2 == 10);
 	REQUIRE(num3 == 15);
 
-}*/
+}
 
 TEST_CASE("Test shallow class copy")
 {
 	MyVector v1(3);
 	MyVector v2 = v1;
+}*/
 
-	
+TEST_CASE("Test class copy assignment")
+{
+	MyVector v1(3);
+	MyVector v2(3);
+	v2 = v1;
 }
