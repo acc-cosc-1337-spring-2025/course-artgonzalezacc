@@ -31,10 +31,16 @@ TEST_CASE("Test class copy assignment")
 	MyVector v1(3);
 	MyVector v2(3);
 	v2 = v1;
-}*/
+}
 
 TEST_CASE("Test my vector overwrite with std::move")
 {
 	MyVector v1(3);
 	MyVector v2 = std::move(v1);
+}*/
+
+TEST_CASE("Create v2 from get_vector return value")
+{
+	MyVector v2(3);
+	v2 = get_my_vector();
 }

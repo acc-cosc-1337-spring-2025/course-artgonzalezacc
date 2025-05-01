@@ -57,9 +57,37 @@ MyVector::MyVector(MyVector&& v1)
     v1.size = 0;
 }
 
+/*
+1-Clear/delete original memory from v2
+2-Point v1 elements to v2 elements
+3-Get size from v1
+4-Point v1.elements to nullptr
+5-Set v1 size to 0
+6-return a self reference(pointer to v2)
+*/
+MyVector& MyVector::operator=(MyVector&& v1)
+{
+    cout<<"Move assignment - Delete memory"<<elements<<"\n";
+    delete[] elements;
+    elements = v1.elements;
+    size = v1.size;
+    cout<<"Move assignment - Memory pointer switched "<<elements<<"\n";
+
+    v1.elements = nullptr;
+    v1.size = 0;
+    
+    return *this;
+}
+
 MyVector::~MyVector()
 {
     cout<<"Destructor ~MyVector() deleting memory at: "<<elements<<"\n";
     delete[] elements;
 }
 
+///FREE FUNCTION NO PART OF MY VECTOR CLASS
+MyVector get_my_vector()
+{
+    MyVector v1(3);
+    return v1;
+}
