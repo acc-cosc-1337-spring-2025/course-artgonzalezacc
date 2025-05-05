@@ -43,7 +43,7 @@ TEST_CASE("Create v2 from get_vector return value")
 {
 	MyVector v2(3);
 	v2 = get_my_vector();
-}*/
+}
 
 TEST_CASE("TEST Add elements to Myvector with push back")
 {
@@ -71,8 +71,20 @@ TEST_CASE("TEST Add elements to Myvector with push back")
 	REQUIRE(v1[4] == 8);
 	REQUIRE(v1.Size() == 5);
 
-/* no segmentation error? why?(no error when going beyond cap and not reserve function)*/
+// no segmentation error? why?(no error when going beyond cap and not reserve function)
 	v1.PushBack(10);
 	REQUIRE(v1[5] == 10);
 	REQUIRE(v1.Capacity() == 10);
+}*/
+
+TEST_CASE("Test default constructor execture Reserve capacity == 0 if branch")
+{
+	MyVector v1;
+	REQUIRE(v1.Capacity() == 0);
+	REQUIRE(v1.Size() == 0);
+
+	v1.PushBack(10);
+	REQUIRE(v1.Capacity() == 8);
+	REQUIRE(v1.Size() == 1);
+
 }

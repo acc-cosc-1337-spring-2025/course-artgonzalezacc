@@ -7,6 +7,7 @@
 class MyVector
 {
 public:
+    MyVector();//constructor default
     MyVector(int c);//constructor
     MyVector(const MyVector& v);//copy constructor Rule of 3 Legacy C++ (before 2009)
     MyVector& operator=(const MyVector& v);//copy assignment Rule of 3
@@ -21,7 +22,7 @@ public:
 private:
     int size{0};//number of elements in the list
     int capacity;//total number of elements
-    int* elements;
+    int* elements{0};
     const int RESERVE_DEFAULT_SIZE{8};//MyVector(), initialize 8 capacity 
     const int RESERVE_DEFAULT_MULTIPLIER{2};//ask for double the memory
     void Reserve(int new_size);

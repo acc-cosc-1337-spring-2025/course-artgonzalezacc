@@ -2,6 +2,12 @@
 
 using std::cout;
 
+MyVector::MyVector() :
+capacity{0}
+{
+
+}
+
 MyVector::MyVector(int c) : capacity(c), elements{new int[c]}
 {
     cout<<"Constructor MyVector(c) created memory at: "<<elements<<"\n";
@@ -118,6 +124,7 @@ void MyVector::PushBack(int value)
 {
     if(capacity == 0)
     {
+        cout<<"Create mem cap == 0";
         Reserve(RESERVE_DEFAULT_SIZE);//Create new memory of 8 slots
     } 
     else if(capacity == size)
