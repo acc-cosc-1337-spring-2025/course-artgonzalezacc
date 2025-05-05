@@ -14,6 +14,9 @@ public:
     MyVector& operator=(MyVector&& v1);//Rule 5 of 5 Modern C++ move assignment
     int& operator[](int index){return elements[index];}
     int& operator[](int index)const{return elements[index];}    
+    int Size()const{return size;}
+    int Capacity()const{return capacity;}
+    void PushBack(int value);
     ~MyVector();//destructor //Rule of 3
 private:
     int size{0};//number of elements in the list

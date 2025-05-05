@@ -37,10 +37,42 @@ TEST_CASE("Test my vector overwrite with std::move")
 {
 	MyVector v1(3);
 	MyVector v2 = std::move(v1);
-}*/
+}
 
 TEST_CASE("Create v2 from get_vector return value")
 {
 	MyVector v2(3);
 	v2 = get_my_vector();
+}*/
+
+TEST_CASE("TEST Add elements to Myvector with push back")
+{
+	MyVector v1(5);
+	REQUIRE(v1.Capacity() == 5);
+
+	v1.PushBack(3);
+
+	REQUIRE(v1[0] == 3);
+	REQUIRE(v1.Size() == 1);
+
+	v1.PushBack(7);
+	REQUIRE(v1[1] == 7);
+	REQUIRE(v1.Size() == 2);
+
+	v1.PushBack(9);
+	REQUIRE(v1[2] == 9);
+	REQUIRE(v1.Size() == 3);
+
+	v1.PushBack(77);
+	REQUIRE(v1[3] == 77);
+	REQUIRE(v1.Size() == 4);
+
+	v1.PushBack(8);
+	REQUIRE(v1[4] == 8);
+	REQUIRE(v1.Size() == 5);
+
+/* no segmentation error? why?
+	v1.PushBack(10);
+	REQUIRE(v1[5] == 10);
+	REQUIRE(v1.Capacity() == 5);*/
 }

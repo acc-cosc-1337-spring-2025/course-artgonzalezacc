@@ -107,6 +107,19 @@ void MyVector::Reserve(int new_size)
     }
 }
 
+/*
+PUSH BACK
+1-if capacity is 0 call Reserve w RESERVE_DEFAULT_SIZE as function argument
+2-else if size equal capacity call Reserve w capacity * RESERVE_DEFAULT_MULTIPLIER
+3-add value to current elements[SIZE]
+4-increment the size
+*/
+void MyVector::PushBack(int value)
+{
+    elements[size] = value;
+    size++;
+}
+
 MyVector::~MyVector()
 {
     cout<<"Destructor ~MyVector() deleting memory at: "<<elements<<"\n";
