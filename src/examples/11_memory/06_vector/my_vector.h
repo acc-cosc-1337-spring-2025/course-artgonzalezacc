@@ -19,6 +19,9 @@ private:
     int size{0};//number of elements in the list
     int capacity;//total number of elements
     int* elements;
+    const int RESERVE_DEFAULT_SIZE{8};//MyVector(), initialize 8 capacity 
+    const int RESERVE_DEFAULT_MULTIPLIER{2};//ask for double the memory
+    void Reserve(int new_size);
 };
 
 #endif
