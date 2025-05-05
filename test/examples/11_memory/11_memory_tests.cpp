@@ -71,8 +71,8 @@ TEST_CASE("TEST Add elements to Myvector with push back")
 	REQUIRE(v1[4] == 8);
 	REQUIRE(v1.Size() == 5);
 
-/* no segmentation error? why?
+/* no segmentation error? why?(no error when going beyond cap and not reserve function)*/
 	v1.PushBack(10);
 	REQUIRE(v1[5] == 10);
-	REQUIRE(v1.Capacity() == 5);*/
+	REQUIRE(v1.Capacity() == 10);
 }

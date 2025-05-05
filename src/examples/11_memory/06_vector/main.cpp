@@ -11,6 +11,7 @@ int main()
     vector.PushBack(9);
     vector.PushBack(77);
     vector.PushBack(8);
+    vector.PushBack(55);
 
     for(auto i=0; i < vector.Size(); i++)
     {
